@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Include the head partial -->
+    <%- include('../partials/head') %>
+</head>
+
+<body id="base">
+    <!-- Include the navigation bar partial -->
+    <%- include('../partials/nav') %>
+
+    <main>
+        <!-- Container for the main content -->
+        <div class="container">
+            <!-- Image representing the page content -->
+            <img src="/imgs/cocktail.jpg" alt="Cocktail Image" />
+            <!-- Text block containing introductory message and search results -->
+            <div class="text-block">
+                <!-- Introductory message for the page -->
+                <p>Welcome to Get Lit, your destination for exquisite cocktails!</p>
+                <!-- Container for displaying search results -->
+                <div id="resultsbox">
+                    <!-- Ordered list to contain search results -->
+                    <ol id="results">
+                        <!-- Placeholder for content loaded dynamically -->
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Include the footer partial -->
+        <%- include('../partials/footer') %>
+    </footer>
+
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- JavaScript -->
+    <script src="/finalScript.js"></script>
+</body>
+
+</html>

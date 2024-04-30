@@ -1,0 +1,34 @@
+<nav class="navbar">
+    <!-- Logo for the website -->
+    <div class="logo">Get Lit</div>
+    <!-- List of navigation links -->
+    <ul class="nav-links">
+        <!-- Menu items container -->
+        <div class="menu">
+            <!-- Home link -->
+            <li><a href="/">Home</a></li>
+            <!-- About link -->
+            <li><a href="/about">About</a></li>
+            <!-- Cocktail of the Day link -->
+            <li><a href="/cotd">Cocktail of The Day</a></li>
+            <!-- Contact link -->
+            <li><a href="/contact">Contact</a></li>
+            <!-- Conditionally render logout button if user is logged in -->
+            <% if (loggedIn) { %>
+                <li><a href="/logout"><button id="logoutButtonNav">Logout</button></a></li>
+                <!-- Profile link for logged-in users -->
+                <li><a href="/profile"><button id="profileButtonNav">Profile</button></a></li>
+            <% } else { %> <!-- Conditionally render login button if user is not logged in -->
+                <li><a href="/login"><button id="loginButtonNav">Login</button></a></li>
+            <% } %>
+        </div>
+    </ul>
+
+    <!-- Search form -->
+    <form id="searchform" action="/" method="get">
+        <!-- Input field for entering search terms -->
+        <input type="text" id="searchterms" placeholder="Search for cocktails" />
+        <!-- Submit button for initiating the search -->
+        <input type="submit" id="searchbutton" value="Search" />
+    </form>
+</nav>

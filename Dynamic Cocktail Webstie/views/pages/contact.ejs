@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Include head partial -->
+    <%- include('../partials/head') %>
+</head>
+
+<body id="base">
+    <!-- Include navigation bar partial -->
+    <%- include('../partials/nav') %>
+
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Image for visual appeal -->
+        <img src="/imgs/cocktail4.jpg" alt="Cocktail Image">
+        <!-- Text block and form for contact information -->
+        <div class="text-block">
+            <!-- Contact form -->
+            <form id="contactForm">
+                <!-- Input field for name -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <!-- Input field for email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <!-- Textarea for message -->
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                <!-- Submit button for form -->
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Include footer partial -->
+        <%- include('../partials/footer') %>
+    </footer>
+
+    <!-- Include external JavaScript file for form functionality -->
+    <script src="finalScript.js"></script>
+</body>
+
+</html>

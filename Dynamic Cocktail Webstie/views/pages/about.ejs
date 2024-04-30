@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Include head partial -->
+    <%- include('../partials/head') %>
+</head>
+
+<body id="base">
+    <!-- Include navigation bar partial -->
+    <%- include('../partials/nav') %>
+
+    <!-- Main content section -->
+    <main>
+        <!-- Container for the about section -->
+        <div class="container about-container">
+            <!-- Image for visual appeal -->
+            <img src="/imgs/cocktail3.jpg" alt="Cocktail Image">
+            <!-- Text block for about us content -->
+            <div class="text-block">
+                <!-- Main title for the about section -->
+                <h1 class="main-title">About Us</h1>
+                <!-- Subtext providing information about the company -->
+                <p class="subtext">
+                    At Get Lit, we're not just about cocktails; we're about crafting experiences and creating memories. Our
+                    journey in mixology is a celebration of flavors, artistry, and the joy of sharing exceptional drinks
+                    with extraordinary individuals like you.
+                </p>
+                <!-- Results box for displaying content (to be loaded dynamically) -->
+                <div id="resultsbox">
+                    <ol id="results">
+                        <!-- Content will be loaded here -->
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Include footer partial -->
+        <%- include('../partials/footer') %>
+    </footer>
+</body>
+
+</html>

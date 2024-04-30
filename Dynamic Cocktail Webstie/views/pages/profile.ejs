@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Include the head partial -->
+    <%- include('../partials/head') %>
+</head>
+
+<body id="base">
+    <!-- Include the navigation bar partial -->
+    <%- include('../partials/nav') %>
+
+    <main>
+        <!-- Container for the profile information -->
+        <div class="container">
+            <div class="text-block">
+                <!-- Heading for the profile section -->
+                <h1>Profile</h1>
+                <!-- Welcome message for the user -->
+                <p>Welcome, <%= user.name %></p>
+                <!-- Form for updating the profile -->
+                <form action="/profile" method="get" id="profileForm">
+                    <!-- Input field for username, pre-filled with current username -->
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="name" value="<%= user.name %>" required><br>
+                    <!-- Input field for password, pre-filled with current password -->
+                    <label for="password">Password:</label>
+                    <input type="text" id="password" name="password" value="<%= user.password %>" required><br>
+                    <!-- Submit button to update the profile -->
+                    <input type="submit" id="updateProfileBtn" value="Update Profile">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Include the footer partial -->
+        <%- include('../partials/footer') %>
+    </footer>
+
+    <!-- scripts and other content here -->
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- external script for handling profile updates -->
+    <script src="/finalScript.js"></script>
+</body>
+
+</html>

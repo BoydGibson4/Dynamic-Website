@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set, compatibility, and viewport -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Security measures: Content Security Policy (CSP) and other security-related meta tags -->
+
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Title of the page -->
+    <title>Get Lit - Search Results</title>
+
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- final script for additional functionality -->
+    <script src="/finalScript.js"></script>
+
+    <style>
+        /* Add additional CSS styles here */
+    </style>
+</head>
+
+<body id="base">
+    <!-- Include the navigation bar partial -->
+    <%- include('../partials/nav') %>
+
+    <main>
+        <!-- Container for the main content -->
+        <div class="container">
+            <!-- Image for visual appeal -->
+            <img src="/imgs/cocktail.jpg" alt="Cocktail Image" />
+            <!-- Text block with welcome message and search results -->
+            <div class="text-block">
+                <p>Welcome to Get Lit, your destination for exquisite cocktails!</p>
+                <!-- Results box for displaying search results -->
+                <div id="resultsbox">
+                    <ol id="results">
+                        <!-- Conditional rendering of search results -->
+                        <% if (cocktails && cocktails.length > 0) { %>
+                            <!-- Loop through each cocktail -->
+                            <% for (var i = 0; i < cocktails.length; i++) { %>
+                                <li>
+                                    <br>
+                                    <!-- Display the name of the cocktail -->
+                                    <u><%= cocktails[i].name %></u>
+                                    <br>
+                                    <!-- Display ingredients of the cocktail -->
+                                    Ingredients: <%= cocktails[i].ingredients.join(', ') %>
+                                    <br>
+                                    <!-- Display instructions for making the cocktail -->
+                                    Instructions: <%= cocktails[i].instructions %>
+                                    <br><br>
+                                </li>
+                                <hr> <!-- Horizontal line for separation -->
+                            <% } %>
+                        <% } else { %>
+                            <!-- Display message when no results are found -->
+                            <p>No results found for '<%= searchTerm %>'</p>
+                        <% } %>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+
+</html>

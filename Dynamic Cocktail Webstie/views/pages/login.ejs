@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Include the head partial -->
+    <%- include('../partials/head') %>
+</head>
+
+<body id="base">
+    <!-- Include the navigation bar partial -->
+    <%- include('../partials/nav') %>
+
+    <main>
+        <!-- Container for the login form -->
+        <div class="login-container">
+            <h1>Login</h1>
+            <!-- Login form -->
+            <form action="/login" method="post" class="login-form" id="loginForm">
+                <!-- Input field for username -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+    
+                <!-- Input field for password -->
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password" required>
+    
+                <!-- Submit button for the login form -->
+                <input type="submit" value="Login">
+    
+                <!-- Link/button for creating an account -->
+                <p>Don't have an account? <a href="/createAccount">Create Account</a></p>
+            </form>
+            <!-- End of login form -->
+        </div>
+    </main>
+
+    <footer>
+        <!-- Include the footer partial -->
+        <%- include('../partials/footer') %>
+    </footer>
+
+    <!-- external login script -->
+    <script src="/finalScript.js"></script>
+</body>
+
+</html>

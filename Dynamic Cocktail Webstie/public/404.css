@@ -1,0 +1,108 @@
+/* Body styles */
+body {
+    /* Set font family for the whole page */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Set background color */
+    background-color: #25274d;
+    /* Set text color */
+    color: #fff;
+    /* Center-align text content */
+    text-align: center;
+    /* Add padding around the content to prevent it from sticking to the edges */
+    padding: 50px;
+}
+
+/* Container styles */
+.container {
+    /* Center the container horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Set the container height to occupy the entire viewport height */
+    height: 100vh;
+}
+
+/* Content styles */
+.content {
+    /* Align text content to the left */
+    text-align: left;
+}
+
+/* Heading styles */
+h1 {
+    /* Set font size for heading */
+    font-size: 4em;
+    /* Add space below the heading */
+    margin-bottom: 10px;
+    /* Set heading color */
+    color: #fca311;
+}
+
+/* Paragraph styles */
+p {
+    /* Set font size for paragraphs */
+    font-size: 1.2em;
+    /* Remove default margin from the top of paragraphs */
+    margin-top: 0;
+    /* Set paragraph color */
+    color: #fca311;
+}
+
+/* Back link styles */
+a.back-link {
+    /* Display the link as an inline block element */
+    display: inline-block;
+    /* Set text color for the link */
+    color: #2d334a;
+    /* Set background color for the link */
+    background-color: #fca311;
+    /* Add padding around the link */
+    padding: 10px 20px;
+    /* Remove underline from the link text */
+    text-decoration: none;
+    /* Make the link text bold */
+    font-weight: bold;
+    /* Add rounded corners to the link */
+    border-radius: 5px;
+    /* Add transition effect for background color change */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover styles for the back link */
+a.back-link:hover {
+    /* Change background color on hover */
+    background-color: #ffba08;
+}
+
+/* Image container styles */
+.image-container {
+    /* Add space to the left of the container */
+    margin-left: 20px;
+}
+
+/* Image styles */
+img {
+    /* Set maximum width for images */
+    max-width: 100%;
+    /* Allow images to resize proportionally */
+    height: auto;
+    /* Add rounded corners to images */
+    border-radius: 8px;
+}
+
+/* Animation styles */
+@keyframes rotate {
+    /* Define animation from 0 degrees to 360 degrees rotation */
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation on hover for images */
+.image-container:hover img {
+    /* Apply the rotate animation to the image on hover */
+    animation: rotate 2s infinite linear;
+}

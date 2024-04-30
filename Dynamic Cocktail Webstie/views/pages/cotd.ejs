@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Include head partial -->
+    <%- include('../partials/head') %>
+</head>
+
+<body id="base">
+    <!-- Include navigation bar partial -->
+    <%- include('../partials/nav') %>
+
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Image for visual appeal -->
+        <img src="/imgs/cocktail2.jpg" alt="Cocktail Image">
+        <!-- Text block for content -->
+        <div class="text-block">
+            <!-- Results box for displaying content -->
+            <div id="resultsbox">
+                <ol id="results">
+                    <!-- Content will be dynamically loaded here -->
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Include footer partial -->
+        <%- include('../partials/footer') %>
+    </footer>
+
+    <!-- Include external JavaScript file for additional functionality -->
+    <script src="/cotd.js"></script>
+</body>
+
+</html>
